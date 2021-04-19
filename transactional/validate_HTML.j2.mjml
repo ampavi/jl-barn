@@ -1,0 +1,34 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      .link-text { background: grey; color: white; font-family: monospace; padding: 10px }
+    </mj-style>
+    <mj-style>
+      a { color: white }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="white">
+    <mj-section background-color="green" full-width="full-width">
+      <mj-column>
+        <mj-text font-size="40px" color="white" align="right">
+          Testing
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text>Please verify your subscription to our newsletter!</mj-text>
+        <mj-button background-color="green" color="white" href="{{ validation_path }}">Click Here to Verify your Email Address</mj-button>
+        <mj-text>Or copy and paste the following link into your browser:</mj-text>
+        <mj-text><div class="link-text" width="100%">{{ validation_path }}</div></mj-text>
+        <mj-text>Thank you!</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#000000" full-width="full-width">
+      <mj-column>
+        <mj-text color="white">You were sent this email because somebody entered your email address into our newsletter sign-up form. If this was not you then please feel free to ignore this email - no further action is necessary. If you would like to explicitly unsubscribe, please <a href="{{ unsubscribe_path }}">click here</a>.</mj-text>
+        <mj-text color="white">Sent by Testing.</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

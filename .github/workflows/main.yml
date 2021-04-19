@@ -1,0 +1,25 @@
+name: Deploy emails
+on:
+  repository_dispatch:
+    types: rebuild
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: npm install
+      run: npm i
+    
+    - name: npm run-script build
+      run: npm run-script build
+    
+    - uses: fnkr/github-action-ghr@v1.3
+      env:
+        GHR_COMPRESS: gz
+        GHR_PATH: .output/
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
