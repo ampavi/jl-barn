@@ -1,7 +1,3 @@
-# Barn
+# justLiberals barn
 
-A collection of email templates for the [Meadow Membership Management System](https://github.com/GrassfedTools/terraform-aws-meadow).
-
-## License
-
-MIT License
+The justLiberals barn is where all the assets are kept. Some are used in the justLbierals deployment of [Meadow](https://github.com/GrassfedTools/terraform-aws-meadow). Some are used to deploy various websites, including [justliberals.org.uk][https://www.justliberals.org.uk].

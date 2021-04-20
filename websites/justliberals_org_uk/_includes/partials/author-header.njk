@@ -1,0 +1,44 @@
+<header class="author-header">
+    <div class="author-header-content">
+         <div class="media pb-4">
+            <img class="author-profile-max rounded-circle d-none d-sm-block" src="{{ author.profile_image }}" alt="Photo of {{ author.name }}"/>
+            <div class="media-body pl-sm-2 blog-post-title">
+                <a href="{{ post.url }}"><h2 class="blog-post-title">{{ author.name }}</h2></a>
+                <p>{{ content | safe }}</p>
+                <div class="author-header-meta">
+                {% if author.facebook %}
+                <div>
+                    <a class="author-header-item" href="https://facebook.com/{{ author.facebook }}" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                        {{ author.facebook }}
+                    </a>
+                </div>
+                {% endif %}
+                {% if author.twitter %}
+                <div>
+                    <a class="author-header-item" href="https://twitter.com/{{ author.twitter | replace("@", "") }}" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                        {{ author.twitter | replace("@", "") }}
+                    </a>
+                </div>
+                {% endif %}
+                {% if author.website %}
+                <div>
+                    <a class="author-header-item" href="{{ author.website }}" target="_blank" rel="noopener noreferrer">
+                        <svg class="icon" aria-hidden="true" focusable="false">
+                            <use xlink:href="#link"></use>
+                        </svg>
+
+                        {{ author.website_short }}
+                    </a>
+                </div>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

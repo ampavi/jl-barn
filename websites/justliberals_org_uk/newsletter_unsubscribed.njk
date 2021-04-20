@@ -1,0 +1,20 @@
+---
+title: Newsletter unsubscribed
+---
+{% extends 'layouts/default.njk' %}
+
+{% block content %}
+<div class="blog-post">
+    <figure>
+        <img class="img-fluid rounded pb-2" src="{{ site.url }}/assets/images/newsletter_unsubscribed.jpg" alt="About us"></img>
+    </figure>
+    <div class="row">
+        <div class="col-xl-8">
+            <h2 class="blog-post-title">Successfully unsubscribed</h2>
+            <p>You are now unsubscribed from the justLiberals newsletter - we're sorry to see you go.</p>
+        </div>
+        {% include "partials/sidebar.njk" %}
+    </div>
+</div>
+
+{% endblock %}

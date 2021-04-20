@@ -1,0 +1,26 @@
+{% include "partials/icons.njk" %}
+
+<div class="blog-header">
+    <header class="container">
+        <nav class="navbar navbar-light navbar-expand-xl">
+            <div class="navbar-brand order-xl-last">
+                <a class="navbar-brand order-xl-last" href="{{ site.url }}/">
+                    <img class="site-logo" src="{{ site.url }}/{{ site.logo }}" alt="{{ site.title }}">
+                </a>
+            </div>
+            <div class="navbar-header mr-auto collapse navbar-collapse"  id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    {% for item in site.navigation %}
+                    <li class="nav-item">
+                        {% if item.label %}
+                        <a class="nav-link {% if page.url == item.url %}active{% endif %}" {% if item.newtab == true %}target="_blank"{% endif %} {% if (item.newtab == true) and ('http' in item.url) %}rel="noopener" {% endif %} href="{{ item.url }}">{{ item.label }}</a>
+                        {% elif item.svg %}
+                        <a class="nav-link" {% if item.newtab == true %}target="_blank" {% endif %} {% if (item.newtab == true) and ('http' in item.url) %}rel="noopener" {% endif %} href="{{ item.url }}"><svg class="icon" focusable="false" aria-labelledby="{{ item.svg }}_header_title"><title id="{{ item.svg }}_header_title" lang="en">{{ item.svg }} logo link</title><use xlink:href="#{{ item.svg }}"></use></svg></a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>

@@ -1,0 +1,20 @@
+---
+title: Newsletter success!
+---
+{% extends 'layouts/default.njk' %}
+
+{% block content %}
+<div class="blog-post">
+    <figure>
+        <img class="img-fluid rounded pb-2" src="{{ site.url }}/assets/images/newsletter_success.jpg" alt="About us"></img>
+    </figure>
+    <div class="row">
+        <div class="col-xl-8">
+            <h2 class="blog-post-title">Success!</h2>
+            <p>You are now subscribed to the justLiberals newsletter! Look out for our next briefing, coming soon to your inbox!</p>
+        </div>
+        {% include "partials/sidebar.njk" %}
+    </div>
+</div>
+
+{% endblock %}
