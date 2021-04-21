@@ -13,7 +13,7 @@
       a { color: white }
     </mj-style>
   </mj-head>
-  <mj-body>
+  <mj-body background-color="white">
     <mj-section background-color="#ffc60a">
       <mj-column>
         <mj-text font-size="40px" align="right">
